@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<drjava version="drjava-20100913-r5387">
+  <project autorefresh="false" build="build/" main="TronClient" manifest="" root="" work="">
+    <createjar file="tron.jar" flags="5"/>
+    <source>
+      <file active="true" name="src/TronClient.java" package="" timestamp="12-May-2011 12:59:10">
+        <select from="8718" to="8718"/>
+        <scroll column="4672" row="0"/>
+      </file>
+      <file name="src/AePlayWave.java" package="" timestamp="09-May-2011 13:07:42">
+        <select from="8718" to="8718"/>
+        <scroll column="4672" row="0"/>
+      </file>
+      <file name="src/TronServer.java" package="" timestamp="12-May-2011 12:20:31">
+        <select from="8718" to="8718"/>
+        <scroll column="4672" row="0"/>
+      </file>
+    </source>
+    <included/>
+    <excluded/>
+    <collapsed/>
+    <classpath>
+      <file absolute="false" name="media/"/>
+    </classpath>
+    <breakpoints/>
+    <watches/>
+    <bookmarks/>
+  </project>
+</drjava>
