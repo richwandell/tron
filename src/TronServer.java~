@@ -26,8 +26,6 @@ class TronServer implements Runnable{
   private LinkedList<String> players = new LinkedList<String>();
   private LinkedList<String> scores = new LinkedList<String>();
   
-  private Thread player1, player2, player3, player4;
-  
   
   
   
@@ -71,16 +69,7 @@ class TronServer implements Runnable{
         scores.add("0");
         
         //start new thread to listen for this clients point updates, sending it the socket pointer and its player number
-        switch(connections){
-          case 1:{player1 = new Thread(new SocketThread(myS, connections)); break;}
-          case 2:{player2 = new Thread(new SocketThread(myS, connections)); break;} 
-          case 3:{player3 = new Thread(new SocketThread(myS, connections)); break;}
-          case 4:{player4 = new Thread(new SocketThread(myS, connections));
-            player1.start(); player2.start(); player3.start(); player4.start();
-            break;}
-          
-        }
-        
+        new Thread(new SocketThread(myS, connections)).start();
         
         //print any exceptions
       }catch(Exception e){ }
@@ -155,7 +144,7 @@ class TronServer implements Runnable{
         
         while(true){ 
           ObjectOutputStream oos = new ObjectOutputStream(localSocket.getOutputStream());
-          
+          System.out.println("writing");
           oos.writeObject((firstTime ? plPoint : points));
           
           
