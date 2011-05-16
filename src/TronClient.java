@@ -301,7 +301,7 @@ class TronClient extends JFrame implements ActionListener, KeyListener, MouseLis
         g.fill3DRect((width/100)*myPoints.get(a).x, (height/100)*myPoints.get(a).y, (width/100), (height/100), true);
         }
       
-      g.fillOval((width/100)*x, (height/100)*y, 10, 10);
+      g.fillOval((width/100)*x-5, (height/100)*y-5, 10, 10);
     }
   }
   
