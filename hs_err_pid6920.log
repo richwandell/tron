@@ -1,0 +1,313 @@
+#
+# A fatal error has been detected by the Java Runtime Environment:
+#
+#  EXCEPTION_ACCESS_VIOLATION (0xc0000005) at pc=0x76687adf, pid=6920, tid=6160
+#
+# JRE version: 6.0_24-b07
+# Java VM: Java HotSpot(TM) Client VM (19.1-b02 mixed mode windows-x86 )
+# Problematic frame:
+# C  [ole32.dll+0x37adf]
+#
+# If you would like to submit a bug report, please visit:
+#   http://java.sun.com/webapps/bugreport/crash.jsp
+# The crash happened outside the Java Virtual Machine in native code.
+# See problematic frame for where to report the bug.
+#
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x48edb400):  JavaThread "RMI TCP Connection(1)-127.0.0.1" daemon [_thread_in_native, id=6160, stack(0x49870000,0x498c0000)]
+
+siginfo: ExceptionCode=0xc0000005, writing address 0x00000028
+
+Registers:
+EAX=0x498be0ec, EBX=0x76797758, ECX=0x00000000, EDX=0x00000000
+ESP=0x498be0bc, EBP=0x498be0c4, ESI=0x498be0ec, EDI=0x00000028
+EIP=0x76687adf, EFLAGS=0x00010246
+
+Register to memory mapping:
+
+EAX=0x498be0ec
+0x498be0ec is pointing into the stack for thread: 0x48edb400
+"RMI TCP Connection(1)-127.0.0.1" daemon prio=6 tid=0x48edb400 nid=0x1810 runnable [0x498be000]
+   java.lang.Thread.State: RUNNABLE
+
+EBX=0x76797758
+0x76797758 is pointing to unknown location
+
+ECX=0x00000000
+0x00000000 is pointing to unknown location
+
+EDX=0x00000000
+0x00000000 is pointing to unknown location
+
+ESP=0x498be0bc
+0x498be0bc is pointing into the stack for thread: 0x48edb400
+"RMI TCP Connection(1)-127.0.0.1" daemon prio=6 tid=0x48edb400 nid=0x1810 runnable [0x498be000]
+   java.lang.Thread.State: RUNNABLE
+
+EBP=0x498be0c4
+0x498be0c4 is pointing into the stack for thread: 0x48edb400
+"RMI TCP Connection(1)-127.0.0.1" daemon prio=6 tid=0x48edb400 nid=0x1810 runnable [0x498be000]
+   java.lang.Thread.State: RUNNABLE
+
+ESI=0x498be0ec
+0x498be0ec is pointing into the stack for thread: 0x48edb400
+"RMI TCP Connection(1)-127.0.0.1" daemon prio=6 tid=0x48edb400 nid=0x1810 runnable [0x498be000]
+   java.lang.Thread.State: RUNNABLE
+
+EDI=0x00000028
+0x00000028 is pointing to unknown location
+
+
+Top of Stack: (sp=0x498be0bc)
+0x498be0bc:   005dcb98 005e1678 498be100 766877ab
+0x498be0cc:   498be0ec 48e6815c 005dcb98 00000000
+0x498be0dc:   00000000 005ac9c8 005e1678 00000000
+0x498be0ec:   0000fc00 00001b08 372cd354 62e20f4d
+0x498be0fc:   2de26d56 498be11c 7668760a 48e50ff0
+0x498be10c:   00000000 7678d83e 48e4d558 005dcb98
+0x498be11c:   498be168 766de1a9 2de26d3e 48e4d558
+0x498be12c:   48e4d558 48e6815c 498be14c 761106e1 
+
+Instructions: (pc=0x76687adf)
+0x76687acf:   90 90 90 8b ff 55 8b ec 56 8b 75 08 57 8d 79 28
+0x76687adf:   a5 a5 a5 a5 5f 5e 5d c2 04 00 ff 75 0c ff 75 08 
+
+
+Stack: [0x49870000,0x498c0000],  sp=0x498be0bc,  free space=312k
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+C  [ole32.dll+0x37adf]
+C  [ole32.dll+0x377ab]
+C  [ole32.dll+0x3760a]
+C  [ole32.dll+0x8e1a9]
+
+Java frames: (J=compiled Java code, j=interpreted, Vv=VM code)
+j  sun.awt.windows.WComponentPeer.addNativeDropTarget()J+0
+j  sun.awt.windows.WComponentPeer.addDropTarget(Ljava/awt/dnd/DropTarget;)V+9
+j  java.awt.dnd.DropTarget.addNotify(Ljava/awt/peer/ComponentPeer;)V+60
+j  java.awt.Component.addNotify()V+297
+j  java.awt.Container.addNotify()V+8
+j  javax.swing.JComponent.addNotify()V+1
+j  java.awt.Container.addNotify()V+61
+j  javax.swing.JComponent.addNotify()V+1
+j  java.awt.Container.addNotify()V+61
+j  javax.swing.JComponent.addNotify()V+1
+j  java.awt.Container.addNotify()V+61
+j  javax.swing.JComponent.addNotify()V+1
+j  java.awt.Container.addNotify()V+61
+j  javax.swing.JComponent.addNotify()V+1
+j  javax.swing.JRootPane.addNotify()V+5
+j  java.awt.Container.addNotify()V+61
+j  java.awt.Window.addNotify()V+73
+j  java.awt.Frame.addNotify()V+70
+j  java.awt.Window.show()V+8
+j  java.awt.Component.show(Z)V+5
+j  java.awt.Component.setVisible(Z)V+2
+j  java.awt.Window.setVisible(Z)V+2
+j  TronClient.<init>()V+776
+j  TronClient.main([Ljava/lang/String;)V+4
+v  ~StubRoutines::call_stub
+j  sun.reflect.NativeMethodAccessorImpl.invoke0(Ljava/lang/reflect/Method;Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;+0
+j  sun.reflect.NativeMethodAccessorImpl.invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;+87
+j  sun.reflect.DelegatingMethodAccessorImpl.invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;+6
+j  java.lang.reflect.Method.invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;+161
+j  edu.rice.cs.drjava.model.compiler.JavacCompiler.runCommand(Ljava/lang/String;Ljava/lang/Class;)V+696
+v  ~StubRoutines::call_stub
+j  sun.reflect.NativeMethodAccessorImpl.invoke0(Ljava/lang/reflect/Method;Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;+0
+j  sun.reflect.NativeMethodAccessorImpl.invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;+87
+j  sun.reflect.DelegatingMethodAccessorImpl.invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;+6
+j  java.lang.reflect.Method.invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;+161
+j  edu.rice.cs.dynamicjava.symbol.JavaClass$JavaMethod.evaluate(Ljava/lang/Object;Ljava/lang/Iterable;Ledu/rice/cs/dynamicjava/interpreter/RuntimeBindings;Ledu/rice/cs/dynamicjava/Options;)Ljava/lang/Object;+72
+j  edu.rice.cs.dynamicjava.interpreter.ExpressionEvaluator.handleMethodCall(Lkoala/dynamicjava/tree/MethodCall;Ljava/lang/Object;)Ljava/lang/Object;+37
+j  edu.rice.cs.dynamicjava.interpreter.ExpressionEvaluator.visit(Lkoala/dynamicjava/tree/StaticMethodCall;)Ljava/lang/Object;+3
+j  koala.dynamicjava.tree.StaticMethodCall.acceptVisitor(Lkoala/dynamicjava/tree/visitor/Visitor;)Ljava/lang/Object;+2
+j  edu.rice.cs.dynamicjava.interpreter.ExpressionEvaluator.value(Lkoala/dynamicjava/tree/Node;)Ljava/lang/Object;+36
+j  edu.rice.cs.dynamicjava.interpreter.ExpressionEvaluator.value(Lkoala/dynamicjava/tree/Node;)Ljava/lang/Object;+27
+j  edu.rice.cs.dynamicjava.interpreter.StatementEvaluator.visit(Lkoala/dynamicjava/tree/ExpressionStatement;)Ledu/rice/cs/dynamicjava/interpreter/StatementEvaluator$Result;+38
+j  edu.rice.cs.dynamicjava.interpreter.StatementEvaluator.visit(Lkoala/dynamicjava/tree/ExpressionStatement;)Ljava/lang/Object;+2
+j  koala.dynamicjava.tree.ExpressionStatement.acceptVisitor(Lkoala/dynamicjava/tree/visitor/Visitor;)Ljava/lang/Object;+2
+j  edu.rice.cs.dynamicjava.interpreter.StatementEvaluator.evaluateSequence(Ljava/lang/Iterable;)Ledu/rice/cs/dynamicjava/interpreter/StatementEvaluator$Result;+56
+j  edu.rice.cs.dynamicjava.interpreter.Interpreter.evaluate(Ljava/lang/Iterable;)Ledu/rice/cs/plt/tuple/Pair;+16
+j  edu.rice.cs.dynamicjava.interpreter.Interpreter.interpret(Ljava/lang/String;)Ledu/rice/cs/plt/tuple/Option;+35
+j  edu.rice.cs.drjava.model.repl.newjvm.InterpreterJVM.interpret(Ljava/lang/String;Ledu/rice/cs/dynamicjava/interpreter/Interpreter;)Ledu/rice/cs/drjava/model/repl/newjvm/InterpretResult;+69
+j  edu.rice.cs.drjava.model.repl.newjvm.InterpreterJVM.interpret(Ljava/lang/String;)Ledu/rice/cs/drjava/model/repl/newjvm/InterpretResult;+12
+v  ~StubRoutines::call_stub
+j  sun.reflect.NativeMethodAccessorImpl.invoke0(Ljava/lang/reflect/Method;Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;+0
+j  sun.reflect.NativeMethodAccessorImpl.invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;+87
+j  sun.reflect.DelegatingMethodAccessorImpl.invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;+6
+j  java.lang.reflect.Method.invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;+161
+j  sun.rmi.server.UnicastServerRef.dispatch(Ljava/rmi/Remote;Ljava/rmi/server/RemoteCall;)V+242
+j  sun.rmi.transport.Transport$1.run()Ljava/lang/Object;+23
+v  ~StubRoutines::call_stub
+j  java.security.AccessController.doPrivileged(Ljava/security/PrivilegedExceptionAction;Ljava/security/AccessControlContext;)Ljava/lang/Object;+0
+j  sun.rmi.transport.Transport.serviceCall(Ljava/rmi/server/RemoteCall;)Z+163
+j  sun.rmi.transport.tcp.TCPTransport.handleMessages(Lsun/rmi/transport/Connection;Z)V+185
+j  sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run0()V+685
+j  sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run()V+50
+j  java.util.concurrent.ThreadPoolExecutor$Worker.runTask(Ljava/lang/Runnable;)V+59
+j  java.util.concurrent.ThreadPoolExecutor$Worker.run()V+28
+j  java.lang.Thread.run()V+11
+v  ~StubRoutines::call_stub
+
+---------------  P R O C E S S  ---------------
+
+Java Threads: ( => current thread )
+  0x0051e400 JavaThread "Java Sound Event Dispatcher" daemon [_thread_blocked, id=5648, stack(0x4c530000,0x4c580000)]
+  0x0051dc00 JavaThread "Thread-4" daemon [_thread_in_native, id=6140, stack(0x4c420000,0x4c470000)]
+  0x0051d800 JavaThread "TimerQueue" daemon [_thread_blocked, id=2660, stack(0x4c0b0000,0x4c100000)]
+  0x0051d000 JavaThread "Thread-3" daemon [_thread_in_vm, id=5932, stack(0x4c020000,0x4c070000)]
+  0x48fee800 JavaThread "AWT-EventQueue-0" [_thread_blocked, id=2716, stack(0x4c810000,0x4c860000)]
+  0x48f3c400 JavaThread "AWT-Windows" daemon [_thread_in_native, id=4496, stack(0x49de0000,0x49e30000)]
+  0x48f3c000 JavaThread "AWT-Shutdown" [_thread_blocked, id=3868, stack(0x49d50000,0x49da0000)]
+  0x48f3ac00 JavaThread "Java2D Disposer" daemon [_thread_blocked, id=1216, stack(0x49cc0000,0x49d10000)]
+  0x48ee8000 JavaThread "Poll DrJava Thread" daemon [_thread_blocked, id=5972, stack(0x49a20000,0x49a70000)]
+  0x48f73800 JavaThread "RMI RenewClean-[127.0.0.1:56847]" daemon [_thread_blocked, id=1780, stack(0x49990000,0x499e0000)]
+  0x48edc000 JavaThread "RMI Scheduler(0)" daemon [_thread_blocked, id=452, stack(0x49900000,0x49950000)]
+=>0x48edb400 JavaThread "RMI TCP Connection(1)-127.0.0.1" daemon [_thread_in_native, id=6160, stack(0x49870000,0x498c0000)]
+  0x003eac00 JavaThread "DestroyJavaVM" [_thread_blocked, id=5652, stack(0x001f0000,0x00240000)]
+  0x48f34000 JavaThread "GC Daemon" daemon [_thread_blocked, id=6900, stack(0x49780000,0x497d0000)]
+  0x48f50800 JavaThread "RMI Reaper" [_thread_blocked, id=3996, stack(0x496f0000,0x49740000)]
+  0x48f93400 JavaThread "RMI TCP Accept-0" daemon [_thread_in_native, id=6348, stack(0x49520000,0x49570000)]
+  0x0050f800 JavaThread "Low Memory Detector" daemon [_thread_blocked, id=5016, stack(0x48d10000,0x48d60000)]
+  0x00505c00 JavaThread "CompilerThread0" daemon [_thread_blocked, id=6716, stack(0x48c80000,0x48cd0000)]
+  0x004fb400 JavaThread "JDWP Event Helper Thread" daemon [_thread_blocked, id=6128, stack(0x48bf0000,0x48c40000)]
+  0x004f9000 JavaThread "JDWP Transport Listener: dt_socket" daemon [_thread_in_native, id=6124, stack(0x48ae0000,0x48b30000)]
+  0x004ecc00 JavaThread "Attach Listener" daemon [_thread_blocked, id=2200, stack(0x48a50000,0x48aa0000)]
+  0x004e9c00 JavaThread "Signal Dispatcher" daemon [_thread_blocked, id=2644, stack(0x489c0000,0x48a10000)]
+  0x004c0c00 JavaThread "Finalizer" daemon [_thread_blocked, id=7112, stack(0x48930000,0x48980000)]
+  0x004bc000 JavaThread "Reference Handler" daemon [_thread_blocked, id=6008, stack(0x01ef0000,0x01f40000)]
+
+Other Threads:
+  0x004b7c00 VMThread [stack: 0x01e60000,0x01eb0000] [id=6320]
+  0x0051c800 WatcherThread [stack: 0x48da0000,0x48df0000] [id=2064]
+
+VM state:not at safepoint (normal execution)
+
+VM Mutex/Monitor currently owned by a thread: None
+
+Heap
+ def new generation   total 4992K, used 4058K [0x04560000, 0x04ac0000, 0x19ab0000)
+  eden space 4480K,  81% used [0x04560000, 0x048f4578, 0x049c0000)
+  from space 512K,  76% used [0x04a40000, 0x04aa24e0, 0x04ac0000)
+  to   space 512K,   0% used [0x049c0000, 0x049c0000, 0x04a40000)
+ tenured generation   total 10944K, used 325K [0x19ab0000, 0x1a560000, 0x44560000)
+   the space 10944K,   2% used [0x19ab0000, 0x19b015e0, 0x19b01600, 0x1a560000)
+ compacting perm gen  total 12800K, used 12663K [0x44560000, 0x451e0000, 0x48560000)
+   the space 12800K,  98% used [0x44560000, 0x451bdcb0, 0x451bde00, 0x451e0000)
+No shared spaces configured.
+
+Dynamic libraries:
+0x00400000 - 0x00424000 	C:\Program Files (x86)\Java\jre6\bin\javaw.exe
+0x77a10000 - 0x77b90000 	C:\Windows\SysWOW64\ntdll.dll
+0x76d20000 - 0x76e20000 	C:\Windows\syswow64\kernel32.dll
+0x76100000 - 0x76146000 	C:\Windows\syswow64\KERNELBASE.dll
+0x76810000 - 0x768b0000 	C:\Windows\syswow64\ADVAPI32.dll
+0x75300000 - 0x753ac000 	C:\Windows\syswow64\msvcrt.dll
+0x76ad0000 - 0x76ae9000 	C:\Windows\SysWOW64\sechost.dll
+0x76f50000 - 0x77040000 	C:\Windows\syswow64\RPCRT4.dll
+0x75110000 - 0x75170000 	C:\Windows\syswow64\SspiCli.dll
+0x75100000 - 0x7510c000 	C:\Windows\syswow64\CRYPTBASE.dll
+0x76e20000 - 0x76f20000 	C:\Windows\syswow64\USER32.dll
+0x76c90000 - 0x76d20000 	C:\Windows\syswow64\GDI32.dll
+0x767b0000 - 0x767ba000 	C:\Windows\syswow64\LPK.dll
+0x768b0000 - 0x7694d000 	C:\Windows\syswow64\USP10.dll
+0x76a00000 - 0x76a60000 	C:\Windows\system32\IMM32.DLL
+0x76000000 - 0x760cc000 	C:\Windows\syswow64\MSCTF.dll
+0x7c340000 - 0x7c396000 	C:\Program Files (x86)\Java\jre6\bin\msvcr71.dll
+0x6d7f0000 - 0x6da96000 	C:\Program Files (x86)\Java\jre6\bin\client\jvm.dll
+0x73960000 - 0x73992000 	C:\Windows\system32\WINMM.dll
+0x71380000 - 0x713cb000 	C:\Windows\system32\apphelp.dll
+0x6d7a0000 - 0x6d7ac000 	C:\Program Files (x86)\Java\jre6\bin\verify.dll
+0x6d320000 - 0x6d33f000 	C:\Program Files (x86)\Java\jre6\bin\java.dll
+0x6d280000 - 0x6d288000 	C:\Program Files (x86)\Java\jre6\bin\hpi.dll
+0x751d0000 - 0x751d5000 	C:\Windows\syswow64\PSAPI.DLL
+0x6d370000 - 0x6d399000 	C:\Program Files (x86)\Java\jre6\bin\jdwp.dll
+0x6d690000 - 0x6d696000 	C:\Program Files (x86)\Java\jre6\bin\npt.dll
+0x6d7e0000 - 0x6d7ef000 	C:\Program Files (x86)\Java\jre6\bin\zip.dll
+0x6d200000 - 0x6d207000 	C:\Program Files (x86)\Java\jre6\bin\dt_socket.dll
+0x76a70000 - 0x76aa5000 	C:\Windows\syswow64\WS2_32.dll
+0x76640000 - 0x76646000 	C:\Windows\syswow64\NSI.dll
+0x729a0000 - 0x729dc000 	C:\Windows\system32\mswsock.dll
+0x72990000 - 0x72995000 	C:\Windows\System32\wshtcpip.dll
+0x72640000 - 0x72656000 	C:\Windows\system32\CRYPTSP.dll
+0x725d0000 - 0x7260b000 	C:\Windows\system32\rsaenh.dll
+0x73ad0000 - 0x73ae7000 	C:\Windows\system32\USERENV.dll
+0x73ac0000 - 0x73acb000 	C:\Windows\system32\profapi.dll
+0x6d600000 - 0x6d613000 	C:\Program Files (x86)\Java\jre6\bin\net.dll
+0x725c0000 - 0x725c6000 	C:\Windows\System32\wship6.dll
+0x72320000 - 0x72330000 	C:\Windows\system32\NLAapi.dll
+0x72570000 - 0x725b4000 	C:\Windows\system32\DNSAPI.dll
+0x72310000 - 0x72318000 	C:\Windows\System32\winrnr.dll
+0x72300000 - 0x72310000 	C:\Windows\system32\napinsp.dll
+0x722e0000 - 0x722f2000 	C:\Windows\system32\pnrpnsp.dll
+0x722d0000 - 0x722dd000 	C:\Windows\system32\wshbth.dll
+0x723f0000 - 0x72415000 	C:\Program Files (x86)\Bonjour\mdnsNSP.dll
+0x72740000 - 0x7275c000 	C:\Windows\system32\Iphlpapi.DLL
+0x72730000 - 0x72737000 	C:\Windows\system32\WINNSI.DLL
+0x723e0000 - 0x723e6000 	C:\Windows\system32\rasadhlp.dll
+0x72260000 - 0x72298000 	C:\Windows\System32\fwpuclnt.dll
+0x6d6f0000 - 0x6d6f6000 	C:\Program Files (x86)\Java\jre6\bin\rmi.dll
+0x6d000000 - 0x6d14a000 	C:\Program Files (x86)\Java\jre6\bin\awt.dll
+0x70f70000 - 0x70fc1000 	C:\Windows\system32\WINSPOOL.DRV
+0x76650000 - 0x767ac000 	C:\Windows\syswow64\ole32.dll
+0x70c00000 - 0x70d9e000 	C:\Windows\WinSxS\x86_microsoft.windows.common-controls_6595b64144ccf1df_6.0.7600.16661_none_420fe3fa2b8113bd\COMCTL32.dll
+0x76430000 - 0x76487000 	C:\Windows\syswow64\SHLWAPI.dll
+0x70ef0000 - 0x70f03000 	C:\Windows\system32\DWMAPI.DLL
+0x70e70000 - 0x70ef0000 	C:\Windows\system32\uxtheme.dll
+0x6d230000 - 0x6d27f000 	C:\Program Files (x86)\Java\jre6\bin\fontmanager.dll
+0x6b410000 - 0x6b5d3000 	C:\Windows\system32\d3d9.dll
+0x739e0000 - 0x739e9000 	C:\Windows\system32\VERSION.dll
+0x6d170000 - 0x6d176000 	C:\Windows\system32\d3d8thk.dll
+0x6aa60000 - 0x6b40a000 	C:\Windows\system32\nvd3dum.dll
+0x726a0000 - 0x726c5000 	C:\Windows\system32\powrprof.dll
+0x76af0000 - 0x76c8d000 	C:\Windows\syswow64\SETUPAPI.dll
+0x76950000 - 0x76977000 	C:\Windows\syswow64\CFGMGR32.dll
+0x76150000 - 0x761df000 	C:\Windows\syswow64\OLEAUT32.dll
+0x76ab0000 - 0x76ac2000 	C:\Windows\syswow64\DEVOBJ.dll
+0x753b0000 - 0x75ff9000 	C:\Windows\syswow64\shell32.dll
+0x4c860000 - 0x4c898000 	C:\Program Files\WIDCOMM\Bluetooth Software\SysWOW64\BtMmHook.dll
+0x6d620000 - 0x6d629000 	C:\Program Files (x86)\Java\jre6\bin\nio.dll
+0x6d510000 - 0x6d534000 	C:\Program Files (x86)\Java\jre6\bin\jsound.dll
+0x6d540000 - 0x6d548000 	C:\Program Files (x86)\Java\jre6\bin\jsoundds.dll
+0x4c190000 - 0x4c202000 	C:\Windows\system32\DSOUND.dll
+0x708e0000 - 0x70919000 	C:\Windows\system32\MMDevAPI.DLL
+0x70b00000 - 0x70bf5000 	C:\Windows\system32\PROPSYS.dll
+0x708b0000 - 0x708e0000 	C:\Windows\system32\wdmaud.drv
+0x707c0000 - 0x707c4000 	C:\Windows\system32\ksuser.dll
+0x707b0000 - 0x707b7000 	C:\Windows\system32\AVRT.dll
+0x70770000 - 0x707a6000 	C:\Windows\system32\AUDIOSES.DLL
+0x70760000 - 0x70768000 	C:\Windows\system32\msacm32.drv
+0x70740000 - 0x70754000 	C:\Windows\system32\MSACM32.dll
+0x70730000 - 0x70737000 	C:\Windows\system32\midimap.dll
+0x763a0000 - 0x76423000 	C:\Windows\syswow64\CLBCatQ.DLL
+0x72330000 - 0x7233e000 	C:\Windows\system32\RpcRtRemote.dll
+
+VM Arguments:
+jvm_args: -ea -Xrunjdwp:transport=dt_socket,server=y,suspend=n,address=56849 -Xdebug -Xnoagent -Djava.compiler=NONE -Xmx1024M -Ddrjava.debug.port=56849 -Dedu.rice.cs.cunit.concJUnit.check.join.enabled=false -Dedu.rice.cs.cunit.concJUnit.check.lucky.enabled=false -Dedu.rice.cs.cunit.concJUnit.check.threads.enabled=false -Djava.rmi.server.hostname=127.0.0.1 
+java_command: edu.rice.cs.plt.concurrent.ProcessTaskController$Runner
+Launcher Type: SUN_STANDARD
+
+Environment Variables:
+JAVA_HOME=C:\Program Files (x86)\Java\jdk1.6.0_23
+CLASSPATH=.;C:\Program Files (x86)\Java\jre6\lib\ext\QTJava.zip
+PATH=C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Python27;C:\Program Files (x86)\Autodesk\Backburner\;C:\Program Files (x86)\Common Files\Autodesk Shared\;C:\Program Files\Common Files\Autodesk Shared\;C:\Program Files (x86)\OpenNI\Bin;C:\Program Files (x86)\Prime Sense\NITE\Bin;c:\Program Files (x86)\Microsoft SQL Server\90\Tools\binn\;C:\Python27(x86);C:\php;C:\Program Files\MySQL\MySQL Server 5.1\bin;C:\Program Files (x86)\MySQL\MySQL Server 5.5\bin;C:\Program Files\WIDCOMM\Bluetooth Software\;C:\Program Files\WIDCOMM\Bluetooth Software\syswow64;c:\django\scsu_alum;c:\wamp\bin;C:\Program Files (x86)\QuickTime\QTSystem\;C:\Program Files (x86)\Java\jdk1.6.0_23\bin;C:\Program Files (x86)\Git\cmd;C:\Program Files (x86)\Java\jre6\bin
+USERNAME=Rich
+OS=Windows_NT
+PROCESSOR_IDENTIFIER=Intel64 Family 6 Model 23 Stepping 10, GenuineIntel
+
+
+
+---------------  S Y S T E M  ---------------
+
+OS: Windows 7 Build 7600 
+
+CPU:total 2 (2 cores per cpu, 1 threads per core) family 6 model 23 stepping 10, cmov, cx8, fxsr, mmx, sse, sse2, sse3, ssse3, sse4.1
+
+Memory: 4k page, physical 8387128k(6045760k free), swap 16772360k(14012300k free)
+
+vm_info: Java HotSpot(TM) Client VM (19.1-b02) for windows-x86 JRE (1.6.0_24-b07), built on Feb  2 2011 17:44:41 by "java_re" with MS VC++ 7.1 (VS2003)
+
+time: Mon May 16 00:42:17 2011
+elapsed time: 13 seconds
+

@@ -149,8 +149,7 @@ class TronServer implements Runnable{
     
     public void run(){           
       try{
-        
-        while(!busy){}
+
         
         
         while(true){ 
